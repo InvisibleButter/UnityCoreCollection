@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "displayName": "UnityCoreCollection",
   "description": "Personal collection of some core scripts",
-  "unity": "2021.3",
-  "dependencies": {
-  },
+  "unity": "2031.3",
   "keywords": [
     "core",
     "services",
