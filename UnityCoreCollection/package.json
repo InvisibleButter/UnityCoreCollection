@@ -1,0 +1,17 @@
+{
+  "name": "com.InvisibleButter.UnityCoreCollection",
+  "version": "1.0.0",
+  "displayName": "UnityCoreCollection",
+  "description": "Personal collection of some core scripts",
+  "unity": "2021.3",
+  "dependencies": {
+  },
+  "keywords": [
+    "core",
+    "services",
+    "bratwurst"
+  ],
+  "author": {
+    "name": "M.B. aka InvisibleButter"
+  }
+}

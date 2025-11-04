@@ -19,10 +19,7 @@ public class EntitySpawner : MonoBehaviour
         Cell[,] grid = ServiceLocator.Instance.GetService<GridService>().Grid;
         foreach (var entity in ServiceLocator.Instance.GetService<MapLoaderService>().MapConfig.Entities)
         {
-            GameObject go = Instantiate(PlantDummy, Holder);
-            PlantPlace plant = go.GetComponent<PlantPlace>();
-            plant.Setup(grid[entity.X, entity.Y]);
-            Plants.Add(go);
+           
         }
     }
 
