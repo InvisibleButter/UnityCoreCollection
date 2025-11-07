@@ -4,8 +4,6 @@ public class GameManager : MonoBehaviour
 {
     private ServiceLocator _serviceLocator;
 
-    public EntitySpawner _entitySpawner;
-
     private void Awake()
     {
         RegisterServices();
@@ -21,14 +19,11 @@ public class GameManager : MonoBehaviour
         {
             _serviceLocator.Add(service);
         }
-
-        _serviceLocator.Register<MapLoaderService>(new MapLoaderService());
-
+        
         _serviceLocator.InitializeAll();
     }
 
-    private void OnAllInitialized()
-    {
-        _entitySpawner.Setup();
-    }
+    protected virtual void AddAdditionalServices() { }
+    
+    protected virtual void OnAllInitialized() { }
 }

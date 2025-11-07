@@ -38,29 +38,13 @@ public class MapLoaderService : IService
         {
             UnityEngine.Debug.LogError("Exception loading config file: " + e);
         }
-
-        foreach (var item in _mapConfig.Entities)
-        {
-            Debug.Log("*** entity " + item.Id + " x/y " + item.X + "/" + item.Y);
-        }
     }
 
     public void WriteMap()
     {
-        _mapConfig.Entities.Add(new MapConfig.Entity
-        {
-            Id = "test_1",
-            Height = 2,
-            Width = 2,
-            X = 3,
-            Y = 0
-        });
-         
         XmlSerializer mySerializer = new XmlSerializer(typeof(MapConfig));
         StreamWriter myWriter = new StreamWriter(Path.Combine(Application.dataPath, "Config/map2.xml"));
         mySerializer.Serialize(myWriter, _mapConfig);
         myWriter.Close();
-
-        Debug.Log("*** save map");
     }
 }
